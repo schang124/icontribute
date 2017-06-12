@@ -1,0 +1,119 @@
+@import "~compass-mixins/lib/compass";
+@import '../mixins/size';
+
+.ico-auth{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../../media/bg_ico.jpg');
+  background-position: center center;
+  background-size: cover;
+}
+
+.ico-auth-tint{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.ico-auth-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index:30;
+  margin: auto;
+  @include rem-fallback(padding, 32px);
+  width: 100%;
+  @include rem-fallback(height, 580px);
+  text-align: center;
+  @include box-sizing(border-box);
+
+  form{
+    position: relative;
+    display: block;
+  }
+}
+
+.ico-auth-logo{
+  h1{
+    margin: 0;
+    padding: 0;
+    @include rem-fallback(font-size, 100px);
+    color: #FFF;
+  }
+
+  h2{
+    margin: 0;
+    padding: 0;
+    @include rem-fallback(font-size, 60px);
+    color: #FFF;
+  }
+
+  p{
+    @include rem-fallback(font-size, 14px);
+    font-weight: 100;
+    color: rgba(#FFF, 0.7);
+    @include rem-fallback(line-height, 32px);
+  }
+}
+
+.ico-auto-login{
+  @include rem-fallback(padding-top, 24px);
+}
+
+.ico-auth-input{
+  position: relative;
+  @include rem-fallback(padding, 8px, 0);
+
+  input{
+    position: relative;
+    z-index: 20;
+    width: 100%;
+    @include rem-fallback(height, 48px);
+    @include rem-fallback(font-size, 18px);
+    color: #FFF;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.9);
+    -webkit-appearance: none;
+    background-color: transparent;
+  }
+
+  button{
+    position: absolute;
+    z-index: 30;
+    right: 0;
+    @include rem-fallback(bottom, 16px);
+  }
+}
+
+.ico-auth-oauth{
+  position: relative;
+  text-align: center;
+
+  ul{
+    padding: 0;
+    overflow: hidden;
+
+    li{
+      display: table-cell;
+      list-style: none;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .ico-auth-container{
+    margin: auto;
+    @include rem-fallback(width, 360px);
+  }
+}

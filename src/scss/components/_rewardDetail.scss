@@ -1,0 +1,88 @@
+@import './_common.scss';
+@import '../helpers/variables';
+
+.ico-my-reward-detail{
+
+}
+
+.ico-my-reward-subject{
+  position: relative;
+  @include rem-fallback(padding, 80px, 0, 16px);
+  text-align: center;
+  background-position: center center;
+  background-size: cover;
+
+  &::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:10;
+    background-color: rgba(black, 0.2);
+  }
+  article{
+    display: inline-block;
+    position: relative;
+    z-index: 20;
+    @include rem-fallback(padding, 16px, 24px);
+    background-color: rgba(black, 0.7);
+  }
+
+  h1{
+    display: block;
+    position: relative;
+    z-index: 30;
+    @include rem-fallback(margin-bottom, 4px);
+    @include rem-fallback(font-size, 18px);
+    color: white;
+  }
+
+  span{
+    display: inline-block;
+    position: relative;
+    z-index: 30;
+    @include rem-fallback(font-size, 12px);
+    color: rgba(white, 0.6);
+  }
+}
+
+.ico-my-reward-stat{
+  @include rem-fallback(padding, 0, 15px);
+
+  .row {
+    background-color: $color-night;
+
+    > div[class^="col"] {
+      @include rem-fallback(padding, 20px, 0, 16px);
+      text-align: center;
+      border-left: 1px solid rgba(white, 0.1);
+
+      &:first-child{
+        border-left: 0;
+      }
+
+      h1{
+        @include rem-fallback(padding-bottom, 4px);
+        @include rem-fallback(font-size, 24px);
+        font-weight: 600;
+        color: white;
+      }
+
+      span{
+        @include rem-fallback(font-size, 12px);
+        color: rgba(white, 0.6);
+      }
+    }
+  }
+}
+
+.ico-my-reward-share{
+  @include rem-fallback(padding, 15px);
+
+  table{
+    margin-top: 0 !important;
+    @include border-radius(3px !important);
+  }
+}

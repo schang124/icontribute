@@ -1,0 +1,37 @@
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_variables.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins/_clearfix.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/mixins/_grid-framework.scss";
+@import "~bootstrap-sass/assets/stylesheets/bootstrap/_grid.scss";
+
+@import "~compass-mixins/lib/compass";
+@import '../mixins/size';
+
+.ico-grid-fluid{
+  .row {
+    > div[class^="col"] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.ico-grid{
+  .row {
+    margin: 0;
+    padding: 0;
+
+    > div[class^="col"] {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
+
+.ico-title{
+  h1{
+    @include rem-fallback(padding, 12px, 0);
+    @include rem-fallback(font-size, 18px);
+    font-weight: 600;
+  }
+}

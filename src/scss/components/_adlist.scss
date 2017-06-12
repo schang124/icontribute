@@ -1,0 +1,104 @@
+@import "~compass-mixins/lib/compass";
+@import '../mixins/size';
+
+.ico-ad{
+  > ul{
+    > li{
+      article{
+
+      }
+    }
+  }
+}
+
+.ico-ad-image{
+  position: relative;
+
+  img{
+    position: relative;
+    z-index: 20;
+    display: block;
+    width: 100%;
+  }
+
+  button{
+    position: absolute;
+    z-index:30;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    @include rem-fallback(width, 80px);
+    @include rem-fallback(height, 80px);
+    opacity: 0.75;
+      
+    img{
+      display: block;
+      width: 100%;
+    }
+  }
+}
+
+.ico-ad-context{
+  @include rem-fallback(padding, 12px, 15px);
+
+  h1{
+    @include rem-fallback(padding, 6px, 0);
+    @include rem-fallback(font-size, 18px);
+    font-weight: 700;
+  }
+
+  ul{
+    @include rem-fallback(padding-bottom, 6px);
+
+    li{
+      @include rem-fallback(font-size, 12px);
+      @include rem-fallback(line-height, 18px);
+
+      > span{
+        opacity: 0.6;
+      }
+
+      > b{
+        display: inline-block;
+        @include rem-fallback(padding-right, 3px);
+        @include rem-fallback(padding-left, 6px);
+      }
+
+      > mark{
+        display: inline-block;
+        @include rem-fallback(padding-left, 3px);
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+.ico-ad-reward{
+  @include rem-fallback(padding, 8px, 0);
+  overflow: hidden;
+  @include rem-fallback(height, 48px);
+  @include rem-fallback(line-height, 32px);
+  border-top: 1px solid rgba(#000, 0.07);
+
+  button{
+    float: right;
+    border-radius: 2px !important;
+  }
+
+  i{
+
+  }
+
+  span{
+    @include rem-fallback(font-size, 13px);
+  }
+
+  mark{
+    @include rem-fallback(padding, 0, 4px);
+    @include rem-fallback(font-size, 13px);
+    color: orange;
+    background-color: transparent;
+  }
+}

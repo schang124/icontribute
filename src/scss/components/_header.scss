@@ -1,0 +1,68 @@
+@import "~compass-mixins/lib/compass";
+@import '../mixins/size';
+@import '../helpers/variables';
+
+header{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 50;
+  @include rem-fallback(height, $header-height);
+  text-align: center;
+  background-color: $color-theme;
+  //@include background-image(linear-gradient(#4de397 ,#73d164));
+
+  .ico-header-title{
+    position: relative;
+    @include rem-fallback(font-size, 24px);
+    @include rem-fallback(line-height, $header-height);
+    font-weight: 500;
+    text-align: center;
+    color: #FFF;
+  }
+
+  .ico-header-button{
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    @include rem-fallback(height, $header-height);
+
+    &.left{
+      left: 0;
+
+      button{
+        float: left;
+      }
+    }
+
+    &.right{
+      right: 0;
+
+      button{
+        float: right;
+      }
+    }
+
+    button{
+      @include rem-fallback(width, $header-height);
+      @include rem-fallback(height, $header-height);
+
+      i{
+        display: inline-block;
+        vertical-align: middle;
+        @include rem-fallback(height, 22px);
+
+        img{
+          height: 100%;
+        }
+      }
+    }
+  }
+
+
+}
+
+.header-default-space{
+  @include rem-fallback(height, $header-height);
+}
